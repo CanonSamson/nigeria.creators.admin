@@ -1,0 +1,41 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
+const Navbar = () => {
+  return (
+    <div className=' px-2 md:px-4 fixed w-full top-0 right-0 z-40'>
+      <div className='  font-inter mx-auto w-full  mt-[16px] md:mt-[26px] max-w-[583px] items-center border border-[#EFEFEF] sticky top-0 flex justify-between bg-[#F8F8F8] rounded-[16px]  md:rounded-[20px]  p-[10px] md:p-[14px]'>
+        <Link href='/'>
+          <Image
+            src='/logo/v1.png'
+            alt='Nigeria Creators'
+            height={100}
+            width={100}
+            className='duration-300 transition-all active:opacity-80 hover:opacity-80 h-[30px]  w-[30px]  md:h-[50px]  md:w-[50px] object-center object-cover rounded-[8px] md:rounded-[16px] '
+          />
+        </Link>
+
+        <nav>
+          <ul className=' inline-flex font font-medium  gap-[10px] text-[14px] md:text-[16px] md:gap-[16px]'>
+            <li>
+              <Link href='/'>Creators</Link>
+            </li>
+            <li>
+              <Link href='/'>Brands</Link>
+            </li>
+            <li>
+              <Link href='/'>Contact</Link>
+            </li>
+          </ul>
+        </nav>
+        <div>
+          <button className='duration-300 transition-all active:opacity-80 hover:opacity-80 md:h-[50px] text-[14px] md:text-[16px] bg-primary text-white font-medium md:rounded-[16px] rounded-[12px] px-3 py-3 md:px-4 md:py-2'>
+            I&apos;m a Brand
+          </button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default Navbar
